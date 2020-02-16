@@ -1,22 +1,32 @@
-const fs = require('fs')
-let input = fs.readFileSync('./input.txt')
-.toString();
-input = parseInt(input);
-if(input<=110) {
-    console.log(input);
-    return;
+// const fs = require("fs");
+// let input = fs.readFileSync("./input.txt").toString();
+// input = parseInt(input);
+// 아 문제를 이해를 못하겠네
+var cnt = 0;
+for (var i = 1; i <= 110; i++) {
+  let a4 = Math.floor(i / 1000);
+  let a3 = Math.floor((i % 1000) / 100);
+  let a2 = Math.floor((i % 100) / 10);
+  let a1 = Math.floor(i % 10);
+  if (i % a4 === 0) {
+    console.log(i);
+    cnt++;
+    continue;
+  }
+  if (i % a3 === 0) {
+    console.log(i);
+    cnt++;
+    continue;
+  }
+  if (i % a2 === 0) {
+    console.log(i);
+    cnt++;
+    continue;
+  }
+  if (i % a1 === 0) {
+    console.log(i);
+    cnt++;
+    continue;
+  }
 }
-let sum =99;
-
-for(let i = 110; i <= input; i++){
-    let arr = i.toString().split('').map((e)=>{return parseInt(e)})
-    let gap = arr[0]-arr[1]
-    for(let j = 1; j < arr.length;j++){
-        if(arr[j-1]-arr[j]===gap){
-            if(j+1 === arr.length){
-                sum++;
-            }
-        }else{break;}
-    }
-}
-console.log(sum);
+console.log(cnt);
