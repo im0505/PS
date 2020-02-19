@@ -1,0 +1,1 @@
+var [a,b]=(require('fs').readFileSync('./input.txt')+'').split('\n');console.log(b.split(' ').filter(x=>x==a).length)
