@@ -1,4 +1,4 @@
-s = 'abcdef'
-print(s[5])
-char = s[3].upper()
-print(char)
+s = 2
+e = 2
+for i in range(s, e+1):
+    print(i)
