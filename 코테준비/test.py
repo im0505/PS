@@ -1,4 +1,3 @@
-s = 2
-e = 2
-for i in range(s, e+1):
-    print(i)
+s = {1, 2, 3, 3}
+s.add(4)
+print(len(s))
