@@ -1,7 +1,5 @@
 let input = parseInt(
-  require("fs")
-    .readFileSync("/dev/stdin")
-    .toString()
+  require("fs").readFileSync(`${__dirname}/input.txt`).toString()
 );
 let eow = 665;
 while (input > 0) {
